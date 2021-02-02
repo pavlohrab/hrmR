@@ -74,12 +74,12 @@ ui <- fluidPage(
 
         # All inputs are in the tabsets
         mainPanel(
-            tabsetPanel(tabPanel("Melting curves", plotlyOutput("melt_curve")),
-                        tabPanel("Melting temps", uiOutput("tmps"), uiOutput("ind_tmps")),
-                        tabPanel("HMR analysis", plotlyOutput("norm_curve"), plotlyOutput("diffplot")),
-                        tabPanel("Clustering", plotlyOutput("wss"), plotlyOutput("silhouette"), plotlyOutput("gap_stat")),
-                        tabPanel("Used data", uiOutput("used_data")),
-                        type = "tabs"
+            tabsetPanel(tabPanel("Melting curves", value = 1, plotlyOutput("melt_curve")),
+                        tabPanel("Melting temps", value = 2, uiOutput("tmps"), uiOutput("ind_tmps")),
+                        tabPanel("HMR analysis",  value = 3, plotlyOutput("norm_curve"), plotlyOutput("diffplot")),
+                        tabPanel("Clustering",  value = 4, plotlyOutput("wss"), plotlyOutput("silhouette"), plotlyOutput("gap_stat")),
+                        tabPanel("Used data",  value = 1, uiOutput("used_data")),
+                        type = "tabs", id="main"
                         )
            
         )
@@ -155,15 +155,18 @@ server <- function(input, output) {
             showElement(selector = "#kmeans_clusters")
             showElement(selector = "#kmeans_cluster_action")
             hideElement(selector = "#eps")
+            showTab("main", 4)
         } else if (as.numeric(input$clust_type) == 3) {
             hideElement(selector = "#kmeans_help")
             hideElement(selector = "#kmeans_clusters")
             showElement(selector = "#eps")
             showElement(selector = "#kmeans_cluster_action")
+            hideTab("main", 4)
         } else {
             hideElement(selector = "#kmeans_help")
             hideElement(selector = "#kmeans_clusters")
             hideElement(selector = "#eps")
+            hideTab("main", 4)
         }
         })
     # Hide/Show UI elements if enable_hrm checkbox is triggered
