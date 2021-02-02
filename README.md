@@ -1,5 +1,5 @@
 # Background
-The hrmR is a shiny app for High Resolution Melting analysis of melting data from Cfx PCR machines (tested with Cfx96). The app is available [here](pavloh.shinyapps.io/hrmR/) and require no installation.
+The hrmR is a shiny app for High Resolution Melting analysis of melting data from Cfx PCR machines (tested with Cfx96). The app is available [here](https://pavloh.shinyapps.io/hrmR/) and require no installation.
 # Inputs
 Input is a single dataframe with the RFU values and the first Temperature column. The dataframe is intended to be a csv file, but the delimiter either ";" or "," and 'Temperature' column preceeding with an empty one. However, one of the columns in a provided file should be named 'Temperature', others would be treated as experiment values. The example file (from Yi Liu solution for python [here](https://github.com/liuyigh/PyHRM)) in the example folder.
 # Usage
