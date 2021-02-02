@@ -1,5 +1,16 @@
 # Background
+
+![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=pavlohrab.hrmR&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/pavlohrab/hrmR?style=for-the-badge)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/pavlohrab/hrmR?include_prereleases&style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/pavlohrab/hrmR?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/pavlohrab/hrmR?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/pavlohrab/hrmR?style=for-the-badge)
+
+![DOI](http://img.shields.io/badge/DOI-10.5281%20%2F%20zenodo.4491296-blue.svg?style=for-the-badge)
+
 The hrmR is a shiny app for High Resolution Melting analysis of melting data from Cfx PCR machines (tested with Cfx96). The app is available [here](https://pavloh.shinyapps.io/hrmR/) and require no installation.
+
 # Inputs
 Input is a single dataframe with the RFU values and the first Temperature column. The dataframe is intended to be a csv file, but the delimiter either ";" or "," and 'Temperature' column preceeding with an empty one. However, one of the columns in a provided file should be named 'Temperature', others would be treated as experiment values. The example file (from Yi Liu solution for python [here](https://github.com/liuyigh/PyHRM)) in the example folder.
 # Usage
@@ -33,3 +44,7 @@ The HRM analysis works only after the reference column (sample) for diff plot is
 2. Trim temperatures influence only diff plot and data used for clustering (see "Used data" tab)
 
 **Note:** Clustering will take place on the whole range on the difference dataframe, not only on melting temps when the HRM analysis is on.
+
+## Citation
+If you found this work helpful, please cite as following:
+Pavlo Hrab. (2021, February 2). pavlohrab/hrmR: Pre-release version (Version v0.1-alpha). Zenodo. http://doi.org/10.5281/zenodo.4491296
