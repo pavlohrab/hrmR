@@ -33,7 +33,7 @@ After uploading a csv file, melting peak plot is available under "Melting curves
 ## Clustering options
 The following clustering options are available when the "Enable clustering values" checkbox is checked:
 1. Algorithm type: K-means, Model-based, DBscan, Hierarchical clustering. 
-2. For every clustering algorithm there is an option to pass (except Model-based clustering) and button "Cluster" should be pressed. The options the ones need to fill are showing individually for every algorithm class.
+2. For every clustering algorithm there are options to pass (except Model-based clustering) and button "Cluster" should be pressed. The options (the ones that need to be filled) are showing individually for every algorithm class.
 
 When HRM mode is not checked, clustering would go with melting temperatures of every curve. If the HRM mode enabled clustering would use the whole range of scaled RFU values (See the difference in "Used data" tab). 
 
