@@ -11,6 +11,32 @@
 
 The hrmR is a shiny app for High Resolution Melting analysis of melting data from Cfx PCR machines (tested with Cfx96). The app is available [here](https://pavloh.shinyapps.io/hrmR/) and require no installation.
 
+# Installation
+No installation is nedeed. The app is available via [link](https://pavloh.shinyapps.io/hrmR/). However, the app is hosting on a free shinyapps.io tier, therefore some troubles in connections can be spotted.
+
+So, local run is prefered, given that the GUI in identical to the web app.
+
+To run the app localy the one should have the [Rstudio](https://rstudio.com/products/rstudio/download/) and [R](https://www.r-project.org) installed in a system.
+First, clone the repository in your desired location. You can do that via [git](https://git-scm.com) -> `git clone https://github.com/pavlohrab/hrmR` , or just downloading the zip file of a repository. (from a dropout menu in green "Code" button in the upper right corner of a repo)
+
+Then, open app.R via Rstudio, and install following packages (using the Rconsole below the app.R code):
+```R
+install.packages(c("shiny", "MBmca", "ggplot2", "dplyr", "reshape2", "mclust",  "plotly", "xtable","shinyjs", "tidyverse", "factoextra", "dbscan", "cluster", "devtools" ))
+```
+The package installation can take a while....
+After all the packages from cran are installed,  the ones, that are deprecated from cran are need to be manually installed:
+```R
+devtools::install_url("https://cran.r-project.org/src/contrib/Archive/MBmca/MBmca_0.0.3-5.tar.gz")
+```
+```R
+devtools::install_url("https://cran.r-project.org/src/contrib/Archive/chipPCR/chipPCR_0.0.8-10.tar.gz")
+```
+Then just press the "Run app" icon in the right top corner of the app.R script:
+
+![run](images/run.png)
+
+**Hint: You can change where to run the app (browser or viewer) via dropout menu near "Run app" button**
+
 # Inputs
 Input is a single dataframe with the RFU values and the first Temperature column. The dataframe is intended to be a csv file, but the delimiter either ";" or "," and 'Temperature' column preceeding with an empty one. However, one of the columns in a provided file should be named 'Temperature', others would be treated as experiment values. The example file (from Yi Liu solution for python [here](https://github.com/liuyigh/PyHRM)) in the example folder.
 # Usage
