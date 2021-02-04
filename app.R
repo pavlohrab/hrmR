@@ -6,15 +6,13 @@ library(ggplot2)
 library(dplyr)
 library(reshape2)
 library(mclust)
-library(cluster)
 library(plotly)
 library(xtable)
 library(shinyjs)
 library(tidyverse)
 library(factoextra)
-library(shinydashboard)
+library(cluster)
 library(dbscan)
-
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
