@@ -13,9 +13,12 @@ The hrmR is a shiny app for High Resolution Melting analysis of melting data fro
 
 # Installation
 No installation is nedeed. The app is available via [link](https://pavloh.shinyapps.io/hrmR/). However, the app is hosting on a free shinyapps.io tier, therefore some troubles in connections can be spotted.
-So, local run is prefered, given that the GUI in identival to the web app.
+
+So, local run is prefered, given that the GUI in identical to the web app.
+
 To run the app localy the one should have the [Rstudio](https://rstudio.com/products/rstudio/download/) and [R](https://www.r-project.org) installed in a system.
 First, clone the repository in your desired location. You can do that via [git](https://git-scm.com) -> `git clone https://github.com/pavlohrab/hrmR` , or just downloading the zip file of a repository. (from a dropout menu in green "Code" button in the upper right corner of a repo)
+
 Then, open app.R via Rstudio, and install following packages (using the Rconsole below the app.R code):
 ```R
 install.packages(c("shiny", "MBmca", "ggplot2", "dplyr", "reshape2", "mclust",  "plotly", "xtable","shinyjs", "tidyverse", "factoextra", "dbscan", "cluster", "devtools" ))
